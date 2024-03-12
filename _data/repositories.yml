@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - mhoo999
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - mhoo999/CodeTestPractice
+  - Sho1007/SesacProject5
+  - mhoo999/Sesac4ndProject
+  - Sho1007/SesacProject3
