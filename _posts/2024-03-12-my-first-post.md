@@ -88,3 +88,11 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <br>
 다음 과정은 로컬에 클론을 만들고, 내 입맛대로 블로그를 꾸며주면 된다.
+
+<script src="https://utteranc.es/client.js"
+        repo="mhoo999/mhoo999.github.io"
+        issue-term="pathname"
+        theme="photon-dark"
+        crossorigin="anonymous"
+        async>
+</script>
