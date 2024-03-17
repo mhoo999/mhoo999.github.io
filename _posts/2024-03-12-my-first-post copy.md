@@ -1,0 +1,57 @@
+---
+layout: post
+title: [백준] 1149번 RGB거리 / C++
+date: 2024-03-17 15:09:00
+description: 백준 1149번 RGB 거리 C++ 풀이
+tags: 백준 boj C++ codingtest algorithm
+categories: codingtest
+thumbnail: assets/img/boj.png
+featured: true
+comments: true
+toc:
+    sidebar: left
+---
+
+#문제
+[백준 1149번 RGB거리](https://www.acmicpc.net/problem/1149)
+<br>
+<br>
+#풀이
+```c++
+#include <iostream>
+#include <algorithm>
+
+#define MAX 1002
+using namespace std;
+
+int house[MAX][3];
+
+int main()
+{
+	ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
+	int N;
+	cin >> N;
+
+	int cost[3];
+	house[0][0] = 0;
+	house[0][1] = 0;
+	house[0][2] = 0;
+
+	for (int i = 1; i <= N; ++i)
+	{
+		cin >> cost[0] >> cost[1] >> cost[2];
+
+		house[i][0] = min(house[i - 1][1], house[i - 1][2]) + cost[0];
+		house[i][1] = min(house[i - 1][0], house[i - 1][2]) + cost[1];
+		house[i][2] = min(house[i - 1][0], house[i - 1][1]) + cost[2];
+	}
+
+	cout << min(min(house[N][0], house[N][1]), house[N][2]);
+}
+```
+<br>
+<br>
+#정리
+칠하려는 집의 색상이 이전, 이후 집과 중복되지 않으면서, 모든 값을 구했을 때 최소의 값을 구하는 문제다.
+dp를 이해하고, 사용할 줄 안다면 쉽게 풀 수 있다.
