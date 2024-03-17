@@ -5,8 +5,9 @@ date: 2024-03-12 23:42:00
 description: jekyll 테마를 사용해서 깃허브 블로그를 만들어 보자!
 tags: github git blog jekyll al-folio
 categories: ETC
-thumbnail: assets/img/240312/thumbnail.jpg
+thumbnail: assets/img/post240312/thumbnail.jpg
 featured: true
+comments: true
 ---
 
 https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 있다. 테마 마다 설치 방법이 조금씩 다를 수 있으니, readme 파일을 꼭 읽어보길 바람!
@@ -15,7 +16,7 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -26,7 +27,7 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <br>
@@ -36,7 +37,7 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <br>
@@ -46,10 +47,10 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <br>
@@ -59,7 +60,7 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/6.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <br>
@@ -69,7 +70,7 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <br>
@@ -79,7 +80,7 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/240312/8.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/post240312/8.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <br>
@@ -88,11 +89,3 @@ https://github.com/topics/jekyll-theme 에서 다양한 테마를 구경할 수 
 <br>
 <br>
 다음 과정은 로컬에 클론을 만들고, 내 입맛대로 블로그를 꾸며주면 된다.
-
-<script src="https://utteranc.es/client.js"
-        repo="mhoo999/mhoo999.github.io"
-        issue-term="pathname"
-        theme="photon-dark"
-        crossorigin="anonymous"
-        async>
-</script>
