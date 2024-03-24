@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img: assets/img/sesac_project04/thumbnail.jpg
-importance: 4
-category: GAME
+title: Jombie Must Die
+description: 스팀에서 퍼블리싱하는 액션 TPS 디펜스 게임 오크 머스트 다이를 레퍼런스로 진행한 프로젝트
+img: assets/img/sesac_project04/thumbnail.gif
+importance: 2
+category: SESAC(2308 ~ 2403)
 ---
 
 Every project has a beautiful feature showcase page.

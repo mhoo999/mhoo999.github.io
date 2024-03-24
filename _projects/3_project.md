@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/sesac_project03/thumbnail.jpg
-redirect: https://unsplash.com
+title: XR 칼리버
+description: 닌텐도 스위치의 스포츠 검술 게임을 레퍼런스 삼아 진행한 VR게임 프로젝트
+img: assets/img/sesac_project03/thumbnail.gif
+# redirect: https://unsplash.com
 importance: 3
-category: GAME
+category: SESAC(2308 ~ 2403)
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: Escape From Sesac
+description: 멀티플레이 익스트렉션 루트 슈팅 장르 게임 개발 프로젝트
 img: assets/img/sesac_project05/thumbnail.gif
-importance: 5
-category: GAME
+importance: 1
+category: SESAC(2308 ~ 2403)
 ---
 
 Every project has a beautiful feature showcase page.

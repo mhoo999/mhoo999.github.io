@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/sesac_project01/thumbnail.jpg
-importance: 1
-category: GAME
-related_publications: true
+title: OUTLOST
+description: 1인칭 시점의 생존 호러 게임 아웃라스트를 레퍼런스 삼아 진행한 첫 번째 게임 프로젝트
+img: assets/img/sesac_project01/thumbnail.gif
+importance: 5
+category: SESAC(2308 ~ 2403)
+# related_publications: true
 ---
 
 Every project has a beautiful feature showcase page.

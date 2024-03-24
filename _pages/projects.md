@@ -5,7 +5,7 @@ permalink: /projects/
 description: 프로젝트입니다.
 nav: true
 nav_order: 3
-display_categories: [GAME, ETC]
+display_categories: [SESAC(2308 ~ 2403), ETC]
 horizontal: false
 ---
 

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/sesac_project02/thumbnail.jpg
-importance: 2
-category: GAME
-giscus_comments: true
+title: Elden Ring
+description: 프롬소프트웨어의 액션RPG 엘든링을 레퍼런스 삼아 진행한 게임 프로젝트
+img: assets/img/sesac_project02/thumbnail.gif
+importance: 4
+category: SESAC(2308 ~ 2403)
+# giscus_comments: true
 ---
 
 Every project has a beautiful feature showcase page.
