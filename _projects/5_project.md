@@ -2,9 +2,9 @@
 layout: page
 title: project 5
 description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: ETC
+img: assets/img/sesac_project05/thumbnail.gif
+importance: 5
+category: GAME
 ---
 
 Every project has a beautiful feature showcase page.

@@ -41,7 +41,8 @@ horizontal: false
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+{% assign sorted_projects = site.projects | where: "category", category | sort: "importance" | reversed %}
+<!-- {% assign sorted_projects = site.projects | sort: "importance" %} -->
 
   <!-- Generate cards for each project -->
 

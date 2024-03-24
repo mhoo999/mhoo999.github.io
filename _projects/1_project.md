@@ -2,7 +2,7 @@
 layout: page
 title: project 1
 description: a project with a background image
-img: assets/img/12.jpg
+img: assets/img/sesac_project01/thumbnail.jpg
 importance: 1
 category: GAME
 related_publications: true

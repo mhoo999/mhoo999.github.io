@@ -2,9 +2,9 @@
 layout: page
 title: project 4
 description: another without an image
-img:
-importance: 3
-category: ETC
+img: assets/img/sesac_project04/thumbnail.jpg
+importance: 4
+category: GAME
 ---
 
 Every project has a beautiful feature showcase page.
