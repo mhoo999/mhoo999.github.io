@@ -10,6 +10,7 @@ toc:
   sidebar: left
 ---
 
+{% raw %}
 # #프로젝트 영상
 {% include video.liquid path="https://youtu.be/5A8AQsEz_eE" class="img-fluid rounded z-depth-1" %}
 
