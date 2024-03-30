@@ -14,7 +14,7 @@ toc:
 {% include video.liquid path="https://youtu.be/5A8AQsEz_eE" class="img-fluid rounded z-depth-1" %}
 
 # #프로젝트 기록(Notion)
-{% notion https://www.notion.so/1-Outlost-4c242463d4734705afd4a9965d3a31ef?pvs=4 %}
+<!-- {% notion https://www.notion.so/1-Outlost-4c242463d4734705afd4a9965d3a31ef?pvs=4 %} -->
 
 # #개요
 
