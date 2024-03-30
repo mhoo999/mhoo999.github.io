@@ -6,14 +6,14 @@ img: assets/img/sesac_project02/thumbnail.gif
 importance: 4
 category: SESAC(2308 ~ 2403)
 toc:
-  - name: 프로젝트 영상
+  - name: 플레이 영상
   - name: 프로젝트 기록
   - name: 개요
   - name: 진행 내용
   - name: 결과
 ---
 
-## 프로젝트 영상
+## 플레이 영상
 
 [![프로젝트 영상 보기](https://img.youtube.com/vi/vwTZQs57Ioo/0.jpg)](https://youtu.be/vwTZQs57Ioo "프로젝트 영상 - 클릭하여 시청")
 

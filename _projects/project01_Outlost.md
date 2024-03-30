@@ -6,14 +6,19 @@ img: assets/img/sesac_project01/thumbnail.gif
 importance: 5
 category: SESAC(2308 ~ 2403)
 toc:
-  - name: 프로젝트 영상
+  - name: 플레이 영상
   - name: 프로젝트 기록
   - name: 개요
   - name: 진행 내용
+    - name: 모작할 게임 선택
+    - name: 역할 분담
+    - name: 작업 진행
+    - name: Function override
+    - name: Night vision
   - name: 결과
 ---
 
-## 프로젝트 영상
+## 플레이 영상
 
 [![프로젝트 영상 보기](https://img.youtube.com/vi/5A8AQsEz_eE/0.jpg)](https://youtu.be/5A8AQsEz_eE "프로젝트 영상 - 클릭하여 시청")
 
