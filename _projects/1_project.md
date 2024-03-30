@@ -10,17 +10,17 @@ toc:
   sidebar: left
 ---
 
-# #프로젝트 영상
-{% include video.liquid path="https://youtu.be/5A8AQsEz_eE" class="img-fluid rounded z-depth-1" %}
+# 프로젝트 영상
+[![프로젝트 영상 보기](https://img.youtube.com/vi/5A8AQsEz_eE/0.jpg)](https://youtu.be/5A8AQsEz_eE "프로젝트 영상 - 클릭하여 시청")
 
-# #프로젝트 기록(Notion)
-<!-- {% notion https://www.notion.so/1-Outlost-4c242463d4734705afd4a9965d3a31ef?pvs=4 %} -->
+# 프로젝트 기록(Notion)
+<a href="https://www.notion.so/1-Outlost-4c242463d4734705afd4a9965d3a31ef" target="_blank">프로젝트 Notion 페이지 바로가기</a>
 
 # #개요
 
-| 진행 기간         | 23/10/04 ~ 23/11/06
-| 작업 인원         | 2명
-| SKILL / IDE      | Unreal Engine, blueprint / Visual studio
+|       Duration       |      Team Size     |      SKILL      |
+| :------------------: | :----------------: | :-------------: |
+| 23/10/04 ~ 23/11/06  |         2          |    UE5.3, BP    |
 
 1인칭 시점의 생존 호러 게임 아웃라스트를 모작하여 진행한 첫 번째 게임 프로젝트.
 플레이어는 밀폐된 공간 안에서 자신을 공격하는 ai를 피해 도망치며 숨겨진 퍼즐을 풀고 탈출하는 내용의 게임.
