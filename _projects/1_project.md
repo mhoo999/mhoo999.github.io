@@ -6,8 +6,7 @@ img: assets/img/sesac_project01/thumbnail.gif
 importance: 5
 category: SESAC(2308 ~ 2403)
 # related_publications: true
-toc:
-  sidebar: left
+pretty_table: true
 ---
 
 # 프로젝트 영상
