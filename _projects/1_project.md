@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: distill
 title: OUTLOST
 description: 1인칭 시점의 생존 호러 게임 아웃라스트를 레퍼런스 삼아 진행한 첫 번째 게임 프로젝트
 img: assets/img/sesac_project01/thumbnail.gif
@@ -7,7 +7,6 @@ importance: 5
 category: SESAC(2308 ~ 2403)
 # related_publications: true
 # pretty_table: true
-bibliography: 2018-12-22-distill.bib
 toc:
   - name: 프로젝트 영상
   - name: 프로젝트 기록(Notion)
@@ -17,21 +16,6 @@ toc:
 images:
   compare: true
   slider: true
-_styles: >
-  .fake-img {
-    background: #bbb;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
-  }
-  .fake-img p {
-    font-family: monospace;
-    color: white;
-    text-align: left;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-  }
 ---
 
 ## 프로젝트 영상
