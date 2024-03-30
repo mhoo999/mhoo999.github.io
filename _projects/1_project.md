@@ -78,10 +78,14 @@ images:
 
 아웃라스트의 가장 큰 특징인 나이트 비전(야간 투시)을 구현하였다. 플레이어 카메라의 포스트 프로세스 메테리얼을 추가하여, 모드를 토글식으로 작동 시켰다.
 
-<img-comparison-slider>
-  {% include figure.liquid path="assets/img/sesac_project01/img4.jpg" class="img-fluid rounded z-depth-1" slot="first" %}
-  {% include figure.liquid path="assets/img/sesac_project01/img5.jpg" class="img-fluid rounded z-depth-1" slot="second" %}
-</img-comparison-slider>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/sesac_project01/img4.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/sesac_project01/img5.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 왼쪽이 원작, 오른쪽이 모작이다. 머터리얼의 구조는 웹 문서를 참고했다.
 
