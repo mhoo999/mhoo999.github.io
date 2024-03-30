@@ -21,7 +21,6 @@ toc:
 
 ## 프로젝트 기록
 
-<a href="https://github.com/1l1l1mountain/SessacFristProject" target="_blank">프로젝트 깃 링크 바로가기</a>
 <a href="https://www.notion.so/1-Outlost-4c242463d4734705afd4a9965d3a31ef" target="_blank">프로젝트 Notion 바로가기</a>
 
 ---
