@@ -10,7 +10,6 @@ toc:
   sidebar: left
 ---
 
-{% raw %}
 # #프로젝트 영상
 {% include video.liquid path="https://youtu.be/5A8AQsEz_eE" class="img-fluid rounded z-depth-1" %}
 
@@ -51,5 +50,3 @@ toc:
 
 ## #결과
 마지막 10일 정도 버그 리포트와 수정하는 방향으로 스케줄을 진행했다. 수정 사항이 30개 정도 나왔는데, 80% 정도 수정하면서 나름 성공적으로 프로젝트를 마무리할 수 있었고, 학원에서 진행한 인기투표에서도 1위를 하는 좋은 결과를 만들 수 있었다.
-
-{% endraw %}
