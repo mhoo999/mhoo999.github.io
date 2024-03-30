@@ -7,23 +7,29 @@ importance: 5
 category: SESAC(2308 ~ 2403)
 # related_publications: true
 # pretty_table: true
+bibliography: 2018-12-22-distill.bib
 toc:
   - name: 프로젝트 영상
   - name: 프로젝트 기록(Notion)
   - name: 개요
   - name: 진행 내용
   - name: 결과
+images:
+  compare: true
+  slider: true
 ---
 
 ## 프로젝트 영상
 
 [![프로젝트 영상 보기](https://img.youtube.com/vi/5A8AQsEz_eE/0.jpg)](https://youtu.be/5A8AQsEz_eE "프로젝트 영상 - 클릭하여 시청")
 
+---
 
 ## 프로젝트 기록(Notion)
 
 <a href="https://www.notion.so/1-Outlost-4c242463d4734705afd4a9965d3a31ef" target="_blank">프로젝트 Notion 페이지 바로가기</a>
 
+---
 
 ## 개요
 
@@ -33,6 +39,8 @@ toc:
 
 1인칭 시점의 생존 호러 게임 아웃라스트를 모작하여 진행한 첫 번째 게임 프로젝트.
 플레이어는 밀폐된 공간 안에서 자신을 공격하는 ai를 피해 도망치며 숨겨진 퍼즐을 풀고 탈출하는 내용의 게임.
+
+---
 
 ## 진행 내용
 
@@ -77,6 +85,8 @@ toc:
 </img-comparison-slider>
 
 왼쪽이 원작, 오른쪽이 모작이다. 머터리얼의 구조는 웹 문서를 참고했다.
+
+---
 
 ## 결과
 
