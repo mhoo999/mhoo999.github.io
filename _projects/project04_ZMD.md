@@ -21,7 +21,7 @@ toc:
 
 ## 프로젝트 기록
 
-<a href="https://github.com/mhoo999/Sesac4ndProject" target="_blank">프로젝트 깃 링크 바로가기</a>
+<a href="https://github.com/mhoo999/Sesac4ndProject" target="_blank">프로젝트 깃 링크 바로가기</a><br>
 <a href="https://www.notion.so/4-343e958c637742528255867fe81fd567?pvs=4" target="_blank">프로젝트 Notion 페이지 바로가기</a>
 
 ---

@@ -21,7 +21,7 @@ toc:
 
 ## 프로젝트 기록
 
-<a href="https://github.com/Sho1007/SesacProject5" target="_blank">프로젝트 깃 링크 바로가기</a>
+<a href="https://github.com/Sho1007/SesacProject5" target="_blank">프로젝트 깃 링크 바로가기</a><br>
 <a href="https://www.notion.so/5-Escape-from-Sesac-f4880bc1f6914df0816617124138b72d?pvs=4" target="_blank">프로젝트 Notion 페이지 바로가기</a>
 
 ---
