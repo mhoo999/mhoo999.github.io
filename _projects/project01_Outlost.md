@@ -10,11 +10,6 @@ toc:
   - name: 프로젝트 기록
   - name: 개요
   - name: 진행 내용
-    - name: 모작할 게임 선택
-    - name: 역할 분담
-    - name: 작업 진행
-    - name: Function override
-    - name: Night vision
   - name: 결과
 ---
 
