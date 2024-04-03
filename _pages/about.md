@@ -2,16 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 안녕하세요. <a href='#' title="겁이 없는">FEARLESS</a> 개발자 유명훈입니다.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>😄 <b>Contact Me</b> 😄</p>
+    <p>Phone  : 010-5220-9785</p>
+    <p>E-mail : <a href="mailto:mhoo999@naver.com">mhoo999@naver.com</a></p>
+    <p>GitHub : <a href="https://github.com/mhoo999" target="_blank">github.com/mhoo999</a></p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"

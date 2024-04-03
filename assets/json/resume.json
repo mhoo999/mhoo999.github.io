@@ -6,7 +6,7 @@
     "email": "mhoo999@naver.com",
     "phone": "+8210-5220-9785",
     "url": "",
-    "summary": "열심히 하는 개발자입니다.",
+    "summary": "배움에 두려움이 없는 개발자 유명훈입니다.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -52,7 +52,7 @@
       "level": "",
       "icon": "fa-solid fa-code",
       "keywords": [
-        "C++"
+        "C++", "C#"
       ]
     },
     {
@@ -60,7 +60,7 @@
       "level": "",
       "icon": "fa-solid fa-gamepad",
       "keywords": [
-        "Unreal Engine"
+        "Unreal Engine", "Unity"
       ]
     }
   ]
