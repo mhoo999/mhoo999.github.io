@@ -6,12 +6,17 @@ img: assets/img/sesac_project05/thumbnail.gif
 importance: 1
 category: SESAC(2308 ~ 2403)
 toc:
+  - name: 게임 소개 영상
   - name: 플레이 영상
   - name: 프로젝트 기록
   - name: 개요
   - name: 진행 내용
   - name: 결과
 ---
+
+## 게임 소개 영상
+
+[![프로젝트 영상 보기](https://img.youtube.com/vi/uRh-SR5xiZY/0.jpg)](https://youtu.be/uRh-SR5xiZY "프로젝트 영상 - 클릭하여 시청")
 
 ## 플레이 영상
 
@@ -41,7 +46,21 @@ AI와 퀘스트, 전반적인 기획을 담당.
 
 ## 진행 내용
 
+### AI FSM 설계
+디자인 패턴 중 하나인 상태 패턴을 선택하여 객체지향적인 ai 설계를 기획했다. 대충 아래와 같이 간단한 다이어그램을 스케치하고 작업을 시작.
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/sesac_project05/img0.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
+### AI Spawn
+
+### Body parts targeting
+
+### UI 작업
+
+### 퀘스트 구조 설계
 
 ---
 
