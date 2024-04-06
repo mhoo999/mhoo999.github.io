@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-04-05T09:03:26+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 11005번 진법 변환2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11005/" rel="alternate" type="text/html" title="[백준] 11005번 진법 변환2 / C++"/><published>2024-04-05T00:00:00+00:00</published><updated>2024-04-05T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11005</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11005/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11005">백준 11005번 진법 변환2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-04-06T07:51:36+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 2751번 수 정렬하기 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj2751/" rel="alternate" type="text/html" title="[백준] 2751번 수 정렬하기 2 / C++"/><published>2024-04-06T00:00:00+00:00</published><updated>2024-04-06T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj2751</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj2751/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2751">백준 2751번 수 정렬하기 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+
+		<span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>최대 1,000,000개의 수가 주어진다. 시간 제한 2초 안에 모든 수를 정렬해야 한다. O(n log n) 시간 복잡도를 가지는 알고리즘이 적합했다. 직접 구현하기 보다는, algorithm 라이브러리의 정렬 함수를 이용하여 해결했다.</p>]]></content><author><name></name></author><category term="Algorithm"/><category term="백준"/><category term="boj"/><category term="C++"/><category term="Codingtest"/><category term="Algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 11005번 진법 변환2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11005/" rel="alternate" type="text/html" title="[백준] 11005번 진법 변환2 / C++"/><published>2024-04-05T00:00:00+00:00</published><updated>2024-04-05T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11005</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11005/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11005">백준 11005번 진법 변환2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -353,43 +385,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>9명의 난쟁이 중에 키 합이 100이 되는 난쟁이 7명의 키를 오름차순으로 출력하는 문제다. 9명 난쟁이의 키를 모두 더한 뒤, 100을 빼고 남은 수가 합이 되는 난쟁이 2명을 찾았다. 그 2명을 뺀 나머지를 오름차순으로 출력하여 해결했다.</p>]]></content><author><name></name></author><category term="Algorithm"/><category term="백준"/><category term="boj"/><category term="C++"/><category term="Codingtest"/><category term="Algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 11653번 소인수분해 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11653/" rel="alternate" type="text/html" title="[백준] 11653번 소인수분해 / C++"/><published>2024-03-26T00:00:00+00:00</published><updated>2024-03-26T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11653</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11653/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11653">백준 11653번 소인수분해</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span> <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-			<span class="n">N</span> <span class="o">/=</span> <span class="n">i</span><span class="p">;</span>
-			<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-
-			<span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="k">break</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>소인수분해(factorization), 하나의 자연수를 더 이상 나눌 수 없는 소수들의 곱으로 표현하는 것. 입력으로 주어진 N을 나누는 1이 아닌 가장 작은 수를 오름차순으로 출력하는 문제다. N이 1이 될 때까지, 나머지 연산이 0인 i를 vector에 삽입하고, 이 후에 std::sort() 함수를 사용하여 vector 내 원소를 오름차순으로 정렬하여 출력하여 풀었다.</p>]]></content><author><name></name></author><category term="Algorithm"/><category term="백준"/><category term="boj"/><category term="C++"/><category term="Codingtest"/><category term="Algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>9명의 난쟁이 중에 키 합이 100이 되는 난쟁이 7명의 키를 오름차순으로 출력하는 문제다. 9명 난쟁이의 키를 모두 더한 뒤, 100을 빼고 남은 수가 합이 되는 난쟁이 2명을 찾았다. 그 2명을 뺀 나머지를 오름차순으로 출력하여 해결했다.</p>]]></content><author><name></name></author><category term="Algorithm"/><category term="백준"/><category term="boj"/><category term="C++"/><category term="Codingtest"/><category term="Algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
