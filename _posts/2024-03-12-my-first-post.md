@@ -6,7 +6,7 @@ description: jekyll 테마를 사용해서 깃허브 블로그를 만들어 보�
 tags: github git blog jekyll al-folio
 categories: ETC
 thumbnail: assets/img/post240312/thumbnail.jpg
-featured: true
+featured: false
 comments: true
 ---
 
