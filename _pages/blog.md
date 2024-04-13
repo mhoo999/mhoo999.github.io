@@ -44,9 +44,21 @@ pagination:
       {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
         <p>&bull;</p>
       {% endif %}
-      {% for category in site.display_categories %}
+      <!-- {% for category in site.display_categories %}
         <li>
           <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
+        {% endunless %}
+      {% endfor %} -->
+      {% for category in site.display_categories %}
+        <li>
+          <i class="fa-solid fa-tag fa-sm"></i> 
+          <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
+            {{ category }}
+          </a>
+          ({{ site.posts | where: "categories", category | size }})
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>

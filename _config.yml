@@ -122,8 +122,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: TechHoonology # blog_name will be displayed in your blog page
-blog_description: 공부, 일상 기록 보관소
+blog_name: Hoonpository # blog_name will be displayed in your blog page
+blog_description: 공부 기록 보관소
 permalink: /blog/:year/:title/
 
 # Pagination
