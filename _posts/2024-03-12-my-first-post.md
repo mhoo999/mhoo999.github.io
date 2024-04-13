@@ -4,7 +4,7 @@ title: 깃허브 블로그 만들기
 date: 2024-03-12 23:42:00
 description: jekyll 테마를 사용해서 깃허브 블로그를 만들어 보자!
 tags: github git blog jekyll al-folio
-categories: ETC
+categories: etc
 thumbnail: assets/img/post240312/thumbnail.jpg
 featured: false
 comments: true

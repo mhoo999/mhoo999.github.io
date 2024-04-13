@@ -279,7 +279,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["boj"] # these tags will be displayed on the front page of your blog
-display_categories: ["Algorithm", "ETC"] # these categories will be displayed on the front page of your blog
+display_categories: ["algorithm", "etc"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
