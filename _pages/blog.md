@@ -33,10 +33,9 @@ pagination:
 
   <div class="tag-category-list">
     <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
+      <!-- {% for tag in site.display_tags %}
         <li>
           <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-          ({{ site.posts | where: "tag", tag | size }})
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -44,7 +43,19 @@ pagination:
       {% endfor %}
       {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
         <p>&bull;</p>
-      {% endif %}
+      {% endif %} -->
+      {% for tag in site.display_tags %}
+        <li>
+          <i class="fa-solid fa-hashtag fa-sm"></i> 
+          <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
+            {{ tag }}
+          </a>
+          ({{ site.posts | where_exp: "item", "item.tags contains tag" | size }})
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
+        {% endunless %}
+      {% endfor %}
       <!-- {% for category in site.display_categories %}
         <li>
           <i class="fa-solid fa-tag fa-sm"></i>
