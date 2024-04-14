@@ -7,20 +7,20 @@
           include figure.liquid
           loading="eager"
           path=project.img
-          sizes = "250px"
+          sizes = "300px"
           alt="project thumbnail"
         %}
       {% endif %}
       <div class="card-body">
         <h2 class="card-title text-lowercase">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
         <!-- 추가된 정보 -->
-        <ul class="list-unstyled mt-2">
+        <ul class="list-unstyled mt-2 project-details">
           <li><strong>Duration:</strong> {{ project.duration }}</li>
           <li><strong>Team Size:</strong> {{ project.team_size }}</li>
           <li><strong>Skills:</strong> {{ project.skills }}</li>
         </ul>
         <!-- 추가된 정보 -->
+        <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
             <div class="github-icon">

@@ -5,7 +5,7 @@ description: 멀티플레이 익스트렉션 루트 슈팅 장르 게임 개발 
 img: assets/img/sesac_project05/thumbnail.gif
 importance: 1
 category: GAME
-duration: 2024년 2월 1일 - 2024년 3월 8일
+duration: 240201 - 240308
 team_size: 2
 skills: UE5.3, BP, C++
 toc:
