@@ -4,7 +4,7 @@ title: Jombie Must Die
 description: 스팀에서 퍼블리싱하는 액션 TPS 디펜스 게임 오크 머스트 다이를 레퍼런스로 진행한 프로젝트
 img: assets/img/sesac_project04/thumbnail.gif
 importance: 2
-category: SESAC(2308 ~ 2403)
+category: GAME
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록

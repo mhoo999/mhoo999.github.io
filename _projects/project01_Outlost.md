@@ -4,7 +4,7 @@ title: OUTLOST
 description: 1인칭 시점의 생존 호러 게임 아웃라스트를 레퍼런스 삼아 진행한 첫 번째 게임 프로젝트
 img: assets/img/sesac_project01/thumbnail.gif
 importance: 5
-category: SESAC(2308 ~ 2403)
+category: GAME
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록

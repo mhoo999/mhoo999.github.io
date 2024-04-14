@@ -4,7 +4,7 @@ title: Escape From Sesac
 description: 멀티플레이 익스트렉션 루트 슈팅 장르 게임 개발 프로젝트
 img: assets/img/sesac_project05/thumbnail.gif
 importance: 1
-category: SESAC(2308 ~ 2403)
+category: GAME
 toc:
   - name: 게임 소개 영상
   - name: 플레이 영상
@@ -99,6 +99,7 @@ void AEOSAIController::SetContext(EEnemystate next)
 </div>
 
 AI는 AISpawner 인스턴스에서 생성되는데, 생성시 해당 인스턴스가 가지고 있는 waypointArray를 전달받는다. 그럼 전달받은 waypoint 순서대로 순찰을 시작한다.
+
 ```c++
 void AAISpawnManager::MakeScave()
 {

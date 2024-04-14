@@ -4,7 +4,7 @@ title: XR 칼리버
 description: 닌텐도 스위치의 스포츠 검술 게임을 레퍼런스 삼아 진행한 VR게임 프로젝트
 img: assets/img/sesac_project03/thumbnail.gif
 importance: 3
-category: SESAC(2308 ~ 2403)
+category: GAME
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록
