@@ -45,24 +45,24 @@ AI와 퀘스트, 전반적인 기획을 담당.
 ---
 
 ## 진행 내용
-
 ### AI FSM 설계
-디자인 패턴 중 하나인 상태 패턴을 선택하여 객체지향적인 ai 설계를 기획했다. 대충 아래와 같이 간단한 다이어그램을 스케치하고 작업을 시작.
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/sesac_project05/img0.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
-최종적으로 구현한 상태는 Patrol, Search, Chase. AI는 기본 Patrol 상태로, 가지고 있는 waypoint array 내 좌표를 순서대로 이동하며 순찰한다. 적이 시야에 들어오거나, 총 소리에 반응하여 Search 상태로 바뀌며, 해당 위치를 조사한다. 적을 발견하면 Chase 상태로 변경되고 사격이 가능할 경우 발포한다.
+디자인 패턴 중 하나인 상태 패턴을 선택하여 객체지향적인 ai 설계를 기획했다. 대충 위와 같이 간단한 다이어그램을 스케치하고 작업을 시작.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/sesac_project05/img1.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+최종적으로 구현한 상태는 Patrol, Search, Chase. AI는 기본 Patrol 상태로, 가지고 있는 waypoint array 내 좌표를 순서대로 이동하며 순찰한다. 적이 시야에 들어오거나, 총 소리에 반응하여 Search 상태로 바뀌며, 해당 위치를 조사한다. 적을 발견하면 Chase 상태로 변경되고 사격이 가능할 경우 발포한다.
+
 
 상태 패턴을 사용함으로써, 각 상태를 별도의 클래스로 분리하여 관리할 수 있었고, 상태 전환 로직을 중앙(controller)에서 제어할 수 있게 만들었다. 이는 유지보수와 기능 확장 시 큰 장점으로 작용하였다.
+
 
 ```c++
 void AEOSAIController::SetContext(EEnemystate next)
@@ -91,14 +91,13 @@ void AEOSAIController::SetContext(EEnemystate next)
 각 상태에서 controller의 SetContext 함수를 호출하여 조건에 따라 상태를 변경한다.
 
 ### AI Spawn
-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/sesac_project05/img3.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 AI는 AISpawner 인스턴스에서 생성되는데, 생성시 해당 인스턴스가 가지고 있는 waypointArray를 전달받는다. 그럼 전달받은 waypoint 순서대로 순찰을 시작한다.
+
 
 ```c++
 void AAISpawnManager::MakeScave()
@@ -124,15 +123,16 @@ void AAISpawnManager::MakeScave()
 	}
 }
 ```
+Authority 즉, 서버일 경우 AI(Scave)를 생성하며, 생성 될 경우 Waypoint를 Set해주고 생성한 AI가 죽었을 때 알림을 받고 재 생성할 수 있도록 OnIsDeadChanged를 구독한다. 마지막 if문은 퀘스트 진행을 위한 objectID와 value를 할당해주는 스니펫이다.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/sesac_project05/img2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+AI는 생성되면 위와 같이 월드에 배치한 waypoint 인스턴스 근처를 순찰한다.
 
 
-AI는 사망 시 본인을 생성한 spawner에게 죽었다고 알려준다. 그럼 spawner는 정해진 시간 이후, 다시 AI를 생성한다.
 ```c++
 void AAISpawnManager::RespawnScave(bool bNewIsDead)
 {
@@ -142,9 +142,9 @@ void AAISpawnManager::RespawnScave(bool bNewIsDead)
 	}
 }
 ```
+AI는 사망 시 본인을 생성한 spawner에게 죽었다고 알려준다. 그럼 spawner는 정해진 시간 이후, 다시 AI를 생성한다.
 
 ### Body parts targeting
-우리 게임에서는 몸통 부위별로 받는 데미지가 다르고, 중요 부위 손상이 아닌 경우 사망에 이르지 않기 때문에 `부위 타격`기능이 중요했다. 그래서 AI는 플레이어를 인지 했을 때, 보이는 부위를 스캔하고 우선 순위를 매겨 해당 부위를 타격할 수 있도록 아래와 같이 코드를 작성했다. 최종적으로 `발견 여부`와 `Targer Location`을 반환한다.
 ```c++
 bool UFSM_Chase_Component::FocusTargetPart(AActor* targetActor, FVector& TargetLocation)
 {
@@ -240,13 +240,13 @@ bool UFSM_Chase_Component::FocusTargetPart(AActor* targetActor, FVector& TargetL
 	return true;
 }
 ```
+우리 게임에서는 몸통 부위별로 받는 데미지가 다르고, 중요 부위 손상이 아닌 경우 사망에 이르지 않기 때문에 `부위 타격`기능이 중요했다. 그래서 AI는 플레이어를 인지 했을 때, 보이는 부위를 스캔하고 우선 순위를 매겨 해당 부위를 타격할 수 있도록 아래와 같이 코드를 작성했다. 최종적으로 `발견 여부`와 `Targer Location`을 반환한다.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/sesac_project05/gif0.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 보이는 특정 부위를 조준하고 발포하지만... 탄이 튀는 것을 구현했기 때문에 랜덤하게 타격받는 것을 볼 수 있다.
 
 ### UI 작업
