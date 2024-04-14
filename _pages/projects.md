@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: 개발자 커리어를 시작하며 진행한 프로젝트 목록입니다.
+description: 썸네일 카드를 통해 간략하게 어떤 프로젝트를 진행했는지 확인할 수 있습니다. 클릭하면 상세로 이동합니다.
 nav: true
 nav_order: 3
 display_categories: [GAME, ETC]

@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: 레포지토리입니다.
+description: 저의 레포지토리 이슈를 통계로 확인해볼 수 있습니다.
 nav: true
 nav_order: 4
 ---
