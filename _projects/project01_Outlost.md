@@ -5,6 +5,9 @@ description: 1인칭 시점의 생존 호러 게임 아웃라스트를 레퍼런
 img: assets/img/sesac_project01/thumbnail.gif
 importance: 5
 category: GAME
+duration: 2023년 10월 4일 - 2023년 11월 6일
+team_size: 2
+skills: UE5.3, BP
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록

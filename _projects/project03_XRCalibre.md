@@ -5,6 +5,9 @@ description: 닌텐도 스위치의 스포츠 검술 게임을 레퍼런스 삼�
 img: assets/img/sesac_project03/thumbnail.gif
 importance: 3
 category: GAME
+duration: 2023년 12월 18일 - 2024년 1월 5일
+team_size: 3
+skills: UE5.3, BP, C++, VR
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록

@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: 프로젝트입니다.
+description: 개발자 커리어를 시작하며 진행한 프로젝트 목록입니다.
 nav: true
 nav_order: 3
 display_categories: [GAME, ETC]

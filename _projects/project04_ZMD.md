@@ -5,6 +5,9 @@ description: 스팀에서 퍼블리싱하는 액션 TPS 디펜스 게임 오크 
 img: assets/img/sesac_project04/thumbnail.gif
 importance: 2
 category: GAME
+duration: 2024년 1월 8일 - 2024년 1월 31일
+team_size: 3
+skills: UE5.3, BP, C++
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록

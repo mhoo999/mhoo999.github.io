@@ -5,6 +5,9 @@ description: 프롬소프트웨어의 액션RPG 엘든링을 레퍼런스 삼아
 img: assets/img/sesac_project02/thumbnail.gif
 importance: 4
 category: GAME
+duration: 2023년 11월 6일 - 2023년 12월 18일
+team_size: 3
+skills: UE5.3, BP
 toc:
   - name: 플레이 영상
   - name: 프로젝트 기록
