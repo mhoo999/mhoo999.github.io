@@ -6,7 +6,7 @@ description: "유클리드 알고리즘이란?"
 tags: euclidean algorithm
 categories: algorithm
 thumbnail: assets/img/post240323/thumbnail.jpg
-featured: true
+featured: false
 comments: true
 ---
 
