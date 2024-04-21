@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-04-20T04:10:16+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1676번 팩토리얼 0의 개수 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1676/" rel="alternate" type="text/html" title="[백준] 1676번 팩토리얼 0의 개수 / C++"/><published>2024-04-20T00:00:00+00:00</published><updated>2024-04-20T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1676</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1676/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1676">백준 1676번 팩토리얼 0의 개수</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-04-21T04:53:38+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 11723번 집합 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11723/" rel="alternate" type="text/html" title="[백준] 11723번 집합 / C++"/><published>2024-04-21T00:00:00+00:00</published><updated>2024-04-21T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11723</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11723/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11723">백준 11723번 집합</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="n">arr</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="nb">false</span> <span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">all</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">fill</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="nb">true</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">empty</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">fill</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="nb">false</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="n">string</span> <span class="n">oper</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">m</span><span class="o">--</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">oper</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">oper</span> <span class="o">==</span> <span class="s">"add"</span><span class="p">)</span>
+        <span class="p">{</span>
+			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+			<span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">oper</span> <span class="o">==</span> <span class="s">"remove"</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+			<span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">oper</span> <span class="o">==</span> <span class="s">"check"</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">oper</span> <span class="o">==</span> <span class="s">"toggle"</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+			<span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="o">!</span><span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+		<span class="p">}</span>
+		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">oper</span> <span class="o">==</span> <span class="s">"all"</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">all</span><span class="p">();</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">empty</span><span class="p">();</span>
+		<span class="p">}</span>
+    <span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>시간 제한이 1.5초로 굉장히 효율적인 연산을 필요로 하는 문제다. 집합 내의 숫자를 확인하는 연산이 있어서 해시를 쓰면 빠르게 풀 수 있을 줄 알았는데, 시간 초과로 실패. x의 입력이 1~20 사이라는 점에서 힌트를 얻어 21개 짜리(0빼고 20까지 써야하니까) bool 타입 집합을 만들고 입력받는 연산을 처리하는 코드를 작성하여 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 1676번 팩토리얼 0의 개수 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1676/" rel="alternate" type="text/html" title="[백준] 1676번 팩토리얼 0의 개수 / C++"/><published>2024-04-20T00:00:00+00:00</published><updated>2024-04-20T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1676</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1676/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1676">백준 1676번 팩토리얼 0의 개수</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -304,43 +365,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>학생들의 몸무게와 키, 등수를 받을 수 있는 vector를 하나 만들고, 몸무게와 키는 입력받은 숫자로, 등수는 0으로 초기화하였다. 그리고 입력받은 몸무게와 키를 토대로 비교를 진행했다. 처음에는 비교 대상이 더 클 경우 등수를 높이는 방법을 생각하며 진행했는데, 몸무게와 키 모두 큰 경우를 제외하곤 등수의 변화가 없음을 인지하고 반대로 1부터 상대방이 클 경우 등수를 올리는 방식으로 변경하여 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 10814번 나이순 정렬 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj10814/" rel="alternate" type="text/html" title="[백준] 10814번 나이순 정렬 / C++"/><published>2024-04-12T00:00:00+00:00</published><updated>2024-04-12T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj10814</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj10814/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/10814">백준 10814번 나이순 정렬</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="k">const</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="k">return</span> <span class="n">x</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span><span class="p">;</span>
-
-	<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;&gt;</span> <span class="n">list</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
-		<span class="n">string</span> <span class="n">name</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">age</span> <span class="o">&gt;&gt;</span> <span class="n">name</span><span class="p">;</span>
-
-		<span class="n">list</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">));</span>
-	<span class="p">}</span>
-
-	<span class="n">stable_sort</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">list</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">cmp</span><span class="p">);</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">p</span> <span class="o">:</span> <span class="n">list</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">p</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="sc">' '</span> <span class="o">&lt;&lt;</span> <span class="n">p</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>입력받은 나이와 이름을 Algorithm 라이브러리의 sort 함수와 정렬 방법으로 사용자 정의 함수를 사용하여 1차 시도를 진행했다. 사용자 정의 함수인 cmp 함수에서는 이름은 비교하지 않고, 나이만 비교 후 return 하도록 코드를 작성하였다. 예제 출력은 맞췄지만, 채점에서 막혀서 알아보니 sort는 비안정적인 정렬 방법으로 원소들의 초기 순서를 보존하지 않는다고 한다. 그에 반해 stable_sort는 안정적인 정렬 방법으로 상대적인 정렬 순서가 유지된다고 한다. sort를 stable_sort로 바꿔서 채점하니 정답이 나왔다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>학생들의 몸무게와 키, 등수를 받을 수 있는 vector를 하나 만들고, 몸무게와 키는 입력받은 숫자로, 등수는 0으로 초기화하였다. 그리고 입력받은 몸무게와 키를 토대로 비교를 진행했다. 처음에는 비교 대상이 더 클 경우 등수를 높이는 방법을 생각하며 진행했는데, 몸무게와 키 모두 큰 경우를 제외하곤 등수의 변화가 없음을 인지하고 반대로 1부터 상대방이 클 경우 등수를 올리는 방식으로 변경하여 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
