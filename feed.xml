@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-04-26T07:20:05+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 9012번 괄호 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9012/" rel="alternate" type="text/html" title="[백준] 9012번 괄호 / C++"/><published>2024-04-26T00:00:00+00:00</published><updated>2024-04-26T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9012</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9012/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9012">백준 9012번 괄호</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-04-27T04:38:03+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1065번 한수 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1065/" rel="alternate" type="text/html" title="[백준] 1065번 한수 / C++"/><published>2024-04-27T00:00:00+00:00</published><updated>2024-04-27T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1065</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1065/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1065">백준 1065번 한수</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+	<span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">cnt</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">else</span>
+	<span class="p">{</span>
+		<span class="n">cnt</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
+
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="kt">int</span> <span class="n">hun</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+			<span class="kt">int</span> <span class="n">ten</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+			<span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+
+			<span class="k">if</span> <span class="p">((</span><span class="n">hun</span> <span class="o">-</span> <span class="n">ten</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">ten</span> <span class="o">-</span> <span class="n">one</span><span class="p">))</span>
+			<span class="p">{</span>
+				<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 100 이하인 경우에는 비교가능한 자릿수가 없기 때문에 바로 출력하고, 100 이상일 경우에는 각 자리수의 차를 비교하여 카운트하여 출력한다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 9012번 괄호 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9012/" rel="alternate" type="text/html" title="[백준] 9012번 괄호 / C++"/><published>2024-04-26T00:00:00+00:00</published><updated>2024-04-26T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9012</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9012/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9012">백준 9012번 괄호</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -319,48 +359,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>첫 입력에서는 내가 가진 카드를, 두 번째 입력에서는 보유 여부를 확인하는 카드의 숫자가 입력된다. 입력 여부에 맞춰 1과 0을 출력하면 되는 문제이다. 내가 가진 카드를 모두 순회하게 되면 O(N*M)이 되므로 매우 비효율적이다. unordered_set(hash set)을 사용하면 O(N+M)으로 효율적인 결과를 도출할 수 있다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 2563번 색종이 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj2563/" rel="alternate" type="text/html" title="[백준] 2563번 색종이 / C++"/><published>2024-04-18T00:00:00+00:00</published><updated>2024-04-18T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj2563</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj2563/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2563">백준 2563번 색종이</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="n">paper</span><span class="p">[</span><span class="mi">101</span><span class="p">][</span><span class="mi">101</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">T</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">T</span><span class="p">;</span>
-
-	<span class="k">while</span> <span class="p">(</span><span class="n">T</span><span class="o">--</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
-
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">paper</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">101</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">101</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">if</span> <span class="p">(</span><span class="n">paper</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span><span class="p">;</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>크기가 101*101인 배열을 하나 만들고 0으로 초기화한다. T번 색종이의 좌측 하단 x, y 좌표를 입력 받는데, 입력 받을 때마다 x, y 각각 +10 만큼의 좌표 값을 1로 바꿔준다. 아무리 많이 중복되어도 1에서 숫자가 바뀌지 않기 때문에 연산이 끝난 후 카운트하여 출력하면 된다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>첫 입력에서는 내가 가진 카드를, 두 번째 입력에서는 보유 여부를 확인하는 카드의 숫자가 입력된다. 입력 여부에 맞춰 1과 0을 출력하면 되는 문제이다. 내가 가진 카드를 모두 순회하게 되면 O(N*M)이 되므로 매우 비효율적이다. unordered_set(hash set)을 사용하면 O(N+M)으로 효율적인 결과를 도출할 수 있다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
