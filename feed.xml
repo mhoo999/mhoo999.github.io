@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-01T05:14:40+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1018번 체스판 다시 칠하기 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1018/" rel="alternate" type="text/html" title="[백준] 1018번 체스판 다시 칠하기 / C++"/><published>2024-05-01T00:00:00+00:00</published><updated>2024-05-01T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1018</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1018/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1018">백준 1018번 체스판 다시 칠하기</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-02T11:34:03+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1158번 요세푸스 문제 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1158/" rel="alternate" type="text/html" title="[백준] 1158번 요세푸스 문제 / C++"/><published>2024-05-02T00:00:00+00:00</published><updated>2024-05-02T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1158</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1158/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1158">백준 1158번 요세푸스 문제</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+    
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
+    
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'&lt;'</span><span class="p">;</span>
+    
+    <span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">idx</span> <span class="o">+</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">", "</span><span class="p">;</span>
+        <span class="n">vec</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="n">idx</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'&gt;'</span><span class="p">;</span>
+    
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 원소를 배열로 받아, k번째 원소를 출력/삭제하며 줄여가는 문제. 인덱스를 선언하여 출력할 원소를 연산하는 것이 포인트, 출력한 원소는 배열에서 삭제하고 모든 원소가 출력될 때까지 반복하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 1018번 체스판 다시 칠하기 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1018/" rel="alternate" type="text/html" title="[백준] 1018번 체스판 다시 칠하기 / C++"/><published>2024-05-01T00:00:00+00:00</published><updated>2024-05-01T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1018</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1018/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1018">백준 1018번 체스판 다시 칠하기</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -494,41 +530,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>서로 다른 자연수의 가장 큰 수를 구해야 하기 때문에 무조건 1부터 더한다. s를 초과할 경우, 연산을 종료하며 s보다 크다면 n– 했을 때가 가장 큰 수이다. s에서 n++를 빼주고, s가 0보다 작다면 n–를 하여 n을 출력하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 1475번 방 번호 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1475/" rel="alternate" type="text/html" title="[백준] 1475번 방 번호 / C++"/><published>2024-04-22T00:00:00+00:00</published><updated>2024-04-22T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1475</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1475/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1475">백준 1475번 방 번호</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="n">number_set</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="n">string</span> <span class="n">n</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'0'</span><span class="p">;</span>
-		<span class="n">number_set</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="kt">int</span> <span class="n">six_nine</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_set</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">number_set</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-	<span class="n">number_set</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">number_set</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="n">six_nine</span><span class="p">;</span>
-
-	<span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">number_set</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cnt</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">cnt</span> <span class="o">=</span> <span class="n">number_set</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span><span class="p">;</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>방 번호 N을 장식하는데, 0-9까지 들어있는 숫자 세트를 몇 개를 써야 하는 지를 계산하는 프로그램 코드를 작성하는 문제. 숫자 0-9에서 가장 많이 중복되는 숫자의 개수를 출력하면 되는 간단한 문제. 하지만 6과 9는 치환이 가능하다는 기믹이 있다. 6과 9를 각각 6의 개수와 9의 개수를 더 해 항상 반올림이 되도록 +1을 한 후 2로 나눠준 수를 대입하고, 예상대로 숫자를 출력하면 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>서로 다른 자연수의 가장 큰 수를 구해야 하기 때문에 무조건 1부터 더한다. s를 초과할 경우, 연산을 종료하며 s보다 크다면 n– 했을 때가 가장 큰 수이다. s에서 n++를 빼주고, s가 0보다 작다면 n–를 하여 n을 출력하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
