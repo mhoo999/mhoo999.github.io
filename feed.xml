@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-10T06:30:37+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 18258번 큐 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj18258/" rel="alternate" type="text/html" title="[백준] 18258번 큐 2 / C++"/><published>2024-05-10T00:00:00+00:00</published><updated>2024-05-10T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj18258</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj18258/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/18258">백준 18258번 큐 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-11T07:12:34+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 2217번 로프 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj2217/" rel="alternate" type="text/html" title="[백준] 2217번 로프 / C++"/><published>2024-05-11T00:00:00+00:00</published><updated>2024-05-11T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj2217</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj2217/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2217">백준 2217번 로프</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
+
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+
+		<span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">rend</span><span class="p">());</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">max</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">max</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 숫자를 입력받는다. 입력받는 숫자는 각 로프가 최대 들어올릴 수 있는 중량을 의미한다. 첫 시도에서는 입력받는 숫자 중 가장 작은 숫자 * 총 입력 받은 숫자를 출력했다. 예제는 성공했지만, 역시나 실패. 하지만 10, 20, 25를 입력 받았을 땐, 가장 작은 숫자인 10 * 3 = 30 이지만, 20와 25만 사용한다면 40까지 가능하다. 그렇기 때문에 일단 입력받은 숫자를 내림차순으로 정렬하고, 차례로 <code class="language-plaintext highlighter-rouge">int x = vec[i] * (i + 1);</code> 수식을 진행하여 가장 큰 수를 찾아 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 18258번 큐 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj18258/" rel="alternate" type="text/html" title="[백준] 18258번 큐 2 / C++"/><published>2024-05-10T00:00:00+00:00</published><updated>2024-05-10T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj18258</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj18258/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/18258">백준 18258번 큐 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
 </span>
@@ -838,45 +877,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>흰색, 검은색 타일이 연속된 최대 50x50 보드에서 8x8 크기를 잘라낸 후, 체스판으로 만드는 데 필요한 최소 비용을 구하는 문제이다. 나는 부르트포스를 이용해 <code class="language-plaintext highlighter-rouge">(0, 0)</code>부터 <code class="language-plaintext highlighter-rouge">(N-7, M-7)</code>까지 8x8의 범위를 최소 비용의 타일맵과 비교하여 문제를 해결했다. 비교 방법에 대해 고민을 많이 했다. NxM 보드에서 0-8, 1-9, 2-10… 까지 8개씩 끊어서 비교하는 방법, 그리고 비교타겟은 0-8인데, board의 1-9의 타일을 어떻게 비교할 것인지에 대해 고민했다. 풀고나니 간단했다. 함수를 떼어내 시작 숫자를 더하여 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 10773번 제로 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj10773/" rel="alternate" type="text/html" title="[백준] 10773번 제로 / C++"/><published>2024-04-30T00:00:00+00:00</published><updated>2024-04-30T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj10773</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj10773/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/10773">백준 10773번 제로</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">cashBook</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">k</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
-
-	<span class="k">while</span> <span class="p">(</span><span class="n">k</span><span class="o">--</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
-
-		<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">cashBook</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">cashBook</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">cashBook</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">ans</span> <span class="o">+=</span> <span class="n">cashBook</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-	<span class="p">}</span>
-
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="p">;</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>k개 숫자를 입력 받아 저장하는데, 0이 입력되면 바로 전에 입력된 숫자를 지운다. 마지막에 저장된 모든 숫자를 더해 출력하면 되는 간단한 문제. vector를 이용하여 숫자를 입력받은 후 연산을 수행하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>흰색, 검은색 타일이 연속된 최대 50x50 보드에서 8x8 크기를 잘라낸 후, 체스판으로 만드는 데 필요한 최소 비용을 구하는 문제이다. 나는 부르트포스를 이용해 <code class="language-plaintext highlighter-rouge">(0, 0)</code>부터 <code class="language-plaintext highlighter-rouge">(N-7, M-7)</code>까지 8x8의 범위를 최소 비용의 타일맵과 비교하여 문제를 해결했다. 비교 방법에 대해 고민을 많이 했다. NxM 보드에서 0-8, 1-9, 2-10… 까지 8개씩 끊어서 비교하는 방법, 그리고 비교타겟은 0-8인데, board의 1-9의 타일을 어떻게 비교할 것인지에 대해 고민했다. 풀고나니 간단했다. 함수를 떼어내 시작 숫자를 더하여 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
