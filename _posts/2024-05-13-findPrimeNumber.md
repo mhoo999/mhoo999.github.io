@@ -6,7 +6,7 @@ description: "6k ± 1 최적화 방법"
 tags: primenumber algorithm
 categories: algorithm
 thumbnail: assets/img/post240513/thumbnail.jpg
-featured: false
+featured: true
 comments: true
 ---
 
