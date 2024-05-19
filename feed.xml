@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-18T03:38:21+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 9461번 파도반 수열 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9461/" rel="alternate" type="text/html" title="[백준] 9461번 파도반 수열 / C++"/><published>2024-05-18T00:00:00+00:00</published><updated>2024-05-18T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9461</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9461/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9461">백준 9461번 파도반 수열</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-19T05:52:47+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1002번 터렛 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1002/" rel="alternate" type="text/html" title="[백준] 1002번 터렛 / C++"/><published>2024-05-19T00:00:00+00:00</published><updated>2024-05-19T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1002</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1002/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1002">백준 1002번 터렛</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">r2</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span> <span class="o">&gt;&gt;</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="n">x2</span> <span class="o">&gt;&gt;</span> <span class="n">y2</span> <span class="o">&gt;&gt;</span> <span class="n">r2</span><span class="p">;</span>
+
+		<span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">pow</span><span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">==</span> <span class="n">r2</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">&gt;</span> <span class="n">r</span> <span class="o">+</span> <span class="n">r2</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">&lt;</span> <span class="n">abs</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">r2</span><span class="p">))</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span> 
+			<span class="p">}</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="n">r</span> <span class="o">+</span> <span class="n">r2</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="n">abs</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">r2</span><span class="p">))</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span>
+			<span class="p">{</span>
+				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>두 개 터렛의 좌표와 목표와의 거리가 주어지고, 목표가 존재할 수 있는 좌표의 수를 구하는 문제다. 그림으로 각 터렛의 좌표를 표시하고, 목표와의 거리를 이용해 원을 그려보면 두 개의 원이 내접하거나 떨어져 있는 경우를 확인할 수 있었다. 주의해야 할 점은 터렛 두 개가 겹칠 수도 있기 때문에, 각 거리가 0인 경우와 0이 아닌 경우를 나눠 생각해야 했다. 먼저 두 개 터렛의 거리를 구한다. 2차원 좌표 두 점 거리를 구하는 방법은 유클리드 공식을 사용하여 구했다. <code class="language-plaintext highlighter-rouge">double dist = sqrt(pow(x2 - x, 2) + pow(y2 - y, 2))</code> (<code class="language-plaintext highlighter-rouge">sqrt</code>는 루트, <code class="language-plaintext highlighter-rouge">pow</code>는 제곱을 구하는 함수다.) 중심이 같은 경우, 반지름이 같다면 ‘-1’, 반지름이 다르다면 두 개 원이 겹치지 않기 때문에 ‘0’을 출력. 중심이 다를 때는 떨어져 있을 때, 한 원이 다른 원의 내부에 있을 때, 내접할 때, 만날 때 등을 고려하여 if문을 작성하여 해결했다. 그리고 좌표가 음수일 수 있기 때문에 절대값을 반환하는 abs 함수를 사용하여 조건을 꾸렸다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 9461번 파도반 수열 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9461/" rel="alternate" type="text/html" title="[백준] 9461번 파도반 수열 / C++"/><published>2024-05-18T00:00:00+00:00</published><updated>2024-05-18T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9461</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9461/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9461">백준 9461번 파도반 수열</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -327,161 +385,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 숫자를 입력받는다. 입력받는 숫자는 각 로프가 최대 들어올릴 수 있는 중량을 의미한다. 첫 시도에서는 입력받는 숫자 중 가장 작은 숫자 * 총 입력 받은 숫자를 출력했다. 예제는 성공했지만, 역시나 실패. 하지만 10, 20, 25를 입력 받았을 땐, 가장 작은 숫자인 10 * 3 = 30 이지만, 20와 25만 사용한다면 40까지 가능하다. 그렇기 때문에 일단 입력받은 숫자를 내림차순으로 정렬하고, 차례로 <code class="language-plaintext highlighter-rouge">int x = vec[i] * (i + 1);</code> 수식을 진행하여 가장 큰 수를 찾아 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 18258번 큐 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj18258/" rel="alternate" type="text/html" title="[백준] 18258번 큐 2 / C++"/><published>2024-05-10T00:00:00+00:00</published><updated>2024-05-10T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj18258</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj18258/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/18258">백준 18258번 큐 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="k">struct</span> <span class="nc">Node</span>
-<span class="p">{</span>
-	<span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
-	<span class="n">Node</span><span class="o">*</span> <span class="n">prevNode</span><span class="p">;</span>
-	<span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">nextNode</span><span class="p">;</span>
-
-	<span class="n">Node</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">prevNode</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">),</span> <span class="n">nextNode</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span> <span class="p">{}</span>
-<span class="p">};</span>
-
-<span class="k">class</span> <span class="nc">Queue</span>
-<span class="p">{</span>
-	<span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-	<span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">front</span><span class="p">;</span>
-	<span class="n">Node</span><span class="o">*</span> <span class="n">back</span><span class="p">;</span>
-
-<span class="nl">public:</span>
-	<span class="n">Queue</span><span class="p">()</span> <span class="o">:</span> <span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">front</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">),</span> <span class="n">back</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span> <span class="p">{}</span>
-
-	<span class="kt">void</span> <span class="nf">Push</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">auto</span> <span class="n">newNode</span> <span class="o">=</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-		<span class="n">Node</span><span class="o">*</span> <span class="n">newRawNode</span> <span class="o">=</span> <span class="n">newNode</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-
-		<span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">front</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">newNode</span><span class="p">);</span>
-			<span class="n">back</span> <span class="o">=</span> <span class="n">newRawNode</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">back</span><span class="o">-&gt;</span><span class="n">nextNode</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">newNode</span><span class="p">);</span>
-			<span class="n">newRawNode</span><span class="o">-&gt;</span><span class="n">prevNode</span> <span class="o">=</span> <span class="n">back</span><span class="p">;</span>
-			<span class="n">back</span> <span class="o">=</span> <span class="n">newRawNode</span><span class="p">;</span>
-		<span class="p">}</span>
-
-		<span class="n">size</span><span class="o">++</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="kt">void</span> <span class="nf">Pop</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"-1"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">front</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-
-			<span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">front</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
-				<span class="n">back</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
-			<span class="p">}</span>
-			<span class="k">else</span>
-			<span class="p">{</span>
-				<span class="n">front</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">front</span><span class="o">-&gt;</span><span class="n">nextNode</span><span class="p">);</span>
-				<span class="n">front</span><span class="o">-&gt;</span><span class="n">prevNode</span> <span class="o">=</span> <span class="nb">nullptr</span><span class="p">;</span>
-			<span class="p">}</span>
-
-			<span class="n">size</span><span class="o">--</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="kt">void</span> <span class="nf">Size</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="kt">void</span> <span class="nf">Empty</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'1'</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'0'</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="kt">void</span> <span class="nf">Front</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"-1"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">front</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="kt">void</span> <span class="nf">Back</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"-1"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">back</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-<span class="p">};</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-
-	<span class="k">auto</span> <span class="n">q</span> <span class="o">=</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Queue</span><span class="o">&gt;</span><span class="p">();</span>
-
-	<span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">string</span> <span class="n">str</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">str</span><span class="p">;</span>
-
-		<span class="k">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">"push"</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
-
-			<span class="n">q</span><span class="o">-&gt;</span><span class="n">Push</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-		<span class="p">}</span>
-		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">"pop"</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">q</span><span class="o">-&gt;</span><span class="n">Pop</span><span class="p">();</span>
-		<span class="p">}</span>
-		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">"size"</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">q</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">();</span>
-		<span class="p">}</span>
-		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">"empty"</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">q</span><span class="o">-&gt;</span><span class="n">Empty</span><span class="p">();</span>
-		<span class="p">}</span>
-		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">"front"</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">q</span><span class="o">-&gt;</span><span class="n">Front</span><span class="p">();</span>
-		<span class="p">}</span>
-		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">"back"</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">q</span><span class="o">-&gt;</span><span class="n">Back</span><span class="p">();</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>최대 2,000,000 명령을 처리하는 큐를 만들었다. 큐 1 문제에서는 shared_ptr을 사용하여 쉽게 해결했는데, 같은 코드로 제출해보니 시간초과에 걸렸다. shared_ptr의 오버헤드가 문제일 것이라는 가정 하에 unique_ptr와 raw pointer로 변경하였더니 해결할 수 있었다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 숫자를 입력받는다. 입력받는 숫자는 각 로프가 최대 들어올릴 수 있는 중량을 의미한다. 첫 시도에서는 입력받는 숫자 중 가장 작은 숫자 * 총 입력 받은 숫자를 출력했다. 예제는 성공했지만, 역시나 실패. 하지만 10, 20, 25를 입력 받았을 땐, 가장 작은 숫자인 10 * 3 = 30 이지만, 20와 25만 사용한다면 40까지 가능하다. 그렇기 때문에 일단 입력받은 숫자를 내림차순으로 정렬하고, 차례로 <code class="language-plaintext highlighter-rouge">int x = vec[i] * (i + 1);</code> 수식을 진행하여 가장 큰 수를 찾아 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
