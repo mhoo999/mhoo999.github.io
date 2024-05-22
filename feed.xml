@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-21T04:51:58+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 2003번 수들의 합 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj2003/" rel="alternate" type="text/html" title="[백준] 2003번 수들의 합 2 / C++"/><published>2024-05-21T00:00:00+00:00</published><updated>2024-05-21T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj2003</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj2003/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2003">백준 2003번 수들의 합 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-22T05:20:40+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1269번 대칭 차집합 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1269/" rel="alternate" type="text/html" title="[백준] 1269번 대칭 차집합 / C++"/><published>2024-05-22T00:00:00+00:00</published><updated>2024-05-22T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1269</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1269/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1269">백준 1269번 대칭 차집합</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unordered_set&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">setA</span><span class="p">;</span>
+<span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">setB</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+
+		<span class="n">setA</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+
+		<span class="n">setB</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">iter</span> <span class="o">:</span> <span class="n">setA</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">setB</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">iter</span><span class="p">)</span> <span class="o">==</span> <span class="n">setB</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+		<span class="p">{</span>
+			<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">iter</span> <span class="o">:</span> <span class="n">setB</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">setA</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">iter</span><span class="p">)</span> <span class="o">==</span> <span class="n">setA</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
+		<span class="p">{</span>
+			<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>두 개 집합의 원소를 받아 각 집합이 공역일 때 차집합 개수를 더하여 출력하는 문제. 배열을 사용하는 경우 시간초과가 발생하여 시간 복잡도가 O(n)인 해쉬맵을 사용하여 해결. <code class="language-plaintext highlighter-rouge">if (setB.find(iter) == setB.end())</code> 인 경우 setA의 모든 원소를 돌면서 setB 내 원소가 없을 경우(<code class="language-plaintext highlighter-rouge">setB.find(iter)</code>가 <code class="language-plaintext highlighter-rouge">setB.end()</code>와 같은 경우) 카운팅하는 코드를 작성하였다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 2003번 수들의 합 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj2003/" rel="alternate" type="text/html" title="[백준] 2003번 수들의 합 2 / C++"/><published>2024-05-21T00:00:00+00:00</published><updated>2024-05-21T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj2003</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj2003/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2003">백준 2003번 수들의 합 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -363,15 +417,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>m이상 n이하의 소수를 모두 출력하는 프로그램을 작성하는 문제. 소수를 찾는 알고리즘을 만드는 데 유용한 6k ± 1 최적화 방법을 사용하여 해결했다. 이 테크닉은 모든 소수가 6의 배수 양 옆 혹은 6의 배수를 제외한 6k ± 1형태로 존재한다는 관찰에 기반한다. <br/> <a href="https://mhoo999.github.io/blog/2024/findPrimeNumber/">소수를 빠르게 찾는 방법</a></p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">소수를 빠르게 찾는 방법</title><link href="https://mhoo999.github.io/blog/2024/findPrimeNumber/" rel="alternate" type="text/html" title="소수를 빠르게 찾는 방법"/><published>2024-05-13T00:00:00+00:00</published><updated>2024-05-13T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/findPrimeNumber</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/findPrimeNumber/"><![CDATA[<p>6k ± 1 최적화 방법은 소수를 찾기 위한 알고리즘에서 매우 유용한 테크닉이다. 이 방법은 모든 소수가 6의 배수 양 옆 혹은 6의 배수를 제외한 6k ± 1 형태로 존재한다는 관찰에 기반한다.</p> <h3 id="수학적-배경">#수학적 배경</h3> <p>6의 배수를 생각해보면, 6k(k는 자연수)는 항상 2와 3의 공배수다. 따라서 소수는 6k에서 발생할 수 없다. 이제 6k 주변을 살펴보면 다음과 같은 형태를 갖게 된다.</p> <ul> <li>6k - 2 = 2(3k - 1) : 2의 배수</li> <li>6k - 3 = 3(2k - 1) : 3의 배수</li> <li>6k : 2와 3의 공배수</li> <li>6k + 2 = 2(3k + 1) : 2의 배수</li> <li>6k + 3 = 3(2k + 1) : 3의 배수</li> </ul> <p>위에서 보듯, 6k - 2, 6k - 3, 6k + 2, 6k + 3 모두 2 또는 3의 배수이기 때문에 소수가 발견될 수 없다. 결과적으로 6의 배수가 아닌 수 중에서 소수를 찾을 가능성이 있는 것은 오직 6k - 1과 6k + 1 뿐이다. 이 두 형태는 6의 배수를 기준으로 앞뒤에 위치하며, 2나 3의 배수가 아닌 경우에 소수일 가능성이 있다.</p> <h3 id="알고리즘-구현">#알고리즘 구현</h3> <p>이 관찰을 통해 소수 판별 함수나 에라토스테네스의 체 알고리즘을 최적화할 수 있다. 일반적으로 소수 판별 시에 모든 수를 확인하는 대신, 6k ± 1 형태에 해당하는 수들만 검사하면 계산량을 줄일 수 있다. 다음은 6k ± 1 최적화를 포함한 C++ 소수 판별 함수다.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
-</span>
-<span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// 1 이하는 소수가 아님</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>  <span class="c1">// 2와 3은 소수</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// 2 또는 3으로 나누어 떨어지면 소수가 아님</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="c1">// 6k - 1 및 6k + 1 형태 검사</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="성능-향상">#성능 향상</h3> <p>이 최적화 방법은 소수를 찾는 알고리즘의 효율을 상당히 향상시킨다. 특히 큰 숫자를 대상으로 할 때, 6의 배수에 대한 배제로 인해 필요한 계산량을 대폭 줄일 수 있다. 그러나 이 방법이 소수를 찾는 데 필요한 모든 계산을 제거하는 것은 아니며, 6k ± 1 형태의 수들 중에서도 실제로 소수가 아닌 경우가 많기 때문에 추가적인 검증이 필요하다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="primenumber"/><category term="algorithm"/><summary type="html"><![CDATA[6k ± 1 최적화 방법]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>m이상 n이하의 소수를 모두 출력하는 프로그램을 작성하는 문제. 소수를 찾는 알고리즘을 만드는 데 유용한 6k ± 1 최적화 방법을 사용하여 해결했다. 이 테크닉은 모든 소수가 6의 배수 양 옆 혹은 6의 배수를 제외한 6k ± 1형태로 존재한다는 관찰에 기반한다. <br/> <a href="https://mhoo999.github.io/blog/2024/findPrimeNumber/">소수를 빠르게 찾는 방법</a></p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
