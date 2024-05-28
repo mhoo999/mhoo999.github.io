@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-27T08:30:42+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 17219번 비밀번호 찾기 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj17219/" rel="alternate" type="text/html" title="[백준] 17219번 비밀번호 찾기 / C++"/><published>2024-05-27T00:00:00+00:00</published><updated>2024-05-27T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj17219</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj17219/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/17219">백준 17219번 비밀번호 찾기</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-28T07:06:51+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 2960번 에라토스테네스의 체 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj17219-copy/" rel="alternate" type="text/html" title="[백준] 2960번 에라토스테네스의 체 / C++"/><published>2024-05-28T00:00:00+00:00</published><updated>2024-05-28T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj17219%20copy</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj17219-copy/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2960">백준 2960번 에라토스테네스의 체</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">deleteNum</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">arr</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">deleteNum</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();)</span>
+		<span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">deleteNum</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+				<span class="n">arr</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">arr</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+			<span class="p">}</span>
+			<span class="k">else</span>
+			<span class="p">{</span>
+				<span class="o">++</span><span class="n">i</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">deleteNum</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>에라토스테네스의 체는 n보다 작거나 같은 모든 소수를 찾는 유명한 알고리즘으로, 다음과 같은 규칙을 갖는다.<br/></p> <ol> <li>2부터 n까지 모든 정수를 적는다.<br/></li> <li>아직 지우지 않은 수 중 가장 작은 수를 찾는다. 이것을 p라고 하고, 이 수는 소수이다.<br/></li> <li>p 를 지우고, 아직 지우지 않은 p의 배수를 크기 순서대로 지운다.<br/></li> <li>아직 모든 수를 지우지 않았다면, 다시 2번 단계로 간다.<br/> 수를 지우고, 남은 수를 계속 비교할 수 있도록 만들어 주는 것. 모든 수를 비교했다면 p를 재설정하고 다시 비교하는 것이 핵심인 문제다. 나는 2개의 벡터 컨테이너를 만들어서 진행을 했다. 하나는 2부터 n까지의 수를 저장하는(앞으로 지워질) 컨테이너, 하나는 수를 출력하기 위해 1번 컨테이너에서 지우는 수를 저장하는 컨테이너. 모든 수를 받은 후, 지운 수를 받는 컨테이너의 원소 수가 k보다 많은 뒤 체크하여 실행되는 반복문을 돌렸다. 1번 컨테이너에서 가장 작은 수를 의미하는 p를 초기화하고, 컨테이너1의 모든 원소를 비교하되 원소를 지우면 다음 원소가 다시 앞으로 오니 조건을 유지했다.(i 변화 없음) 지우지 않았을 경우에만 i++하여 조건을 변경하였고, 반복문을 나와 컨테이너 2번에서 [k-1]원소를 출력하여 해결했다.</li> </ol>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 17219번 비밀번호 찾기 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj17219/" rel="alternate" type="text/html" title="[백준] 17219번 비밀번호 찾기 / C++"/><published>2024-05-27T00:00:00+00:00</published><updated>2024-05-27T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj17219</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj17219/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/17219">백준 17219번 비밀번호 찾기</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;unordered_map&gt;</span><span class="cp">
 </span>
@@ -386,49 +429,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>두 개 터렛의 좌표와 목표와의 거리가 주어지고, 목표가 존재할 수 있는 좌표의 수를 구하는 문제다. 그림으로 각 터렛의 좌표를 표시하고, 목표와의 거리를 이용해 원을 그려보면 두 개의 원이 내접하거나 떨어져 있는 경우를 확인할 수 있었다. 주의해야 할 점은 터렛 두 개가 겹칠 수도 있기 때문에, 각 거리가 0인 경우와 0이 아닌 경우를 나눠 생각해야 했다. 먼저 두 개 터렛의 거리를 구한다. 2차원 좌표 두 점 거리를 구하는 방법은 유클리드 공식을 사용하여 구했다. <code class="language-plaintext highlighter-rouge">double dist = sqrt(pow(x2 - x, 2) + pow(y2 - y, 2))</code> (<code class="language-plaintext highlighter-rouge">sqrt</code>는 루트, <code class="language-plaintext highlighter-rouge">pow</code>는 제곱을 구하는 함수다.) 중심이 같은 경우, 반지름이 같다면 ‘-1’, 반지름이 다르다면 두 개 원이 겹치지 않기 때문에 ‘0’을 출력. 중심이 다를 때는 떨어져 있을 때, 한 원이 다른 원의 내부에 있을 때, 내접할 때, 만날 때 등을 고려하여 if문을 작성하여 해결했다. 그리고 좌표가 음수일 수 있기 때문에 절대값을 반환하는 abs 함수를 사용하여 조건을 꾸렸다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 9461번 파도반 수열 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9461/" rel="alternate" type="text/html" title="[백준] 9461번 파도반 수열 / C++"/><published>2024-05-18T00:00:00+00:00</published><updated>2024-05-18T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9461</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9461/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9461">백준 9461번 파도반 수열</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">long</span> <span class="kt">long</span> <span class="n">hypotenuses</span><span class="p">[</span><span class="mi">101</span><span class="p">];</span>
-
-<span class="kt">void</span> <span class="nf">triangle</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">hypotenuses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">hypotenuses</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">hypotenuses</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">5</span><span class="p">];</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">hypotenuses</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
-
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-	<span class="n">hypotenuses</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-
-	<span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-
-		<span class="n">triangle</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>파도반 수열은 8개 이후부터 규칙성을 보이기 시작한다. <code class="language-plaintext highlighter-rouge">hypotenuses[i] = hypotenuses[i - 1] + hypotenuses[i - 5]</code> 파도반 수열은 숫자가 기하급수적으로 증가하기 때문에 int가 담을 수 있는 데이터의 양을 금방 초과한다. 데이터 타입을 long long으로 만들어 주면 쉽게 해결할 수 있다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>두 개 터렛의 좌표와 목표와의 거리가 주어지고, 목표가 존재할 수 있는 좌표의 수를 구하는 문제다. 그림으로 각 터렛의 좌표를 표시하고, 목표와의 거리를 이용해 원을 그려보면 두 개의 원이 내접하거나 떨어져 있는 경우를 확인할 수 있었다. 주의해야 할 점은 터렛 두 개가 겹칠 수도 있기 때문에, 각 거리가 0인 경우와 0이 아닌 경우를 나눠 생각해야 했다. 먼저 두 개 터렛의 거리를 구한다. 2차원 좌표 두 점 거리를 구하는 방법은 유클리드 공식을 사용하여 구했다. <code class="language-plaintext highlighter-rouge">double dist = sqrt(pow(x2 - x, 2) + pow(y2 - y, 2))</code> (<code class="language-plaintext highlighter-rouge">sqrt</code>는 루트, <code class="language-plaintext highlighter-rouge">pow</code>는 제곱을 구하는 함수다.) 중심이 같은 경우, 반지름이 같다면 ‘-1’, 반지름이 다르다면 두 개 원이 겹치지 않기 때문에 ‘0’을 출력. 중심이 다를 때는 떨어져 있을 때, 한 원이 다른 원의 내부에 있을 때, 내접할 때, 만날 때 등을 고려하여 if문을 작성하여 해결했다. 그리고 좌표가 음수일 수 있기 때문에 절대값을 반환하는 abs 함수를 사용하여 조건을 꾸렸다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
