@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-28T07:06:51+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 2960번 에라토스테네스의 체 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj17219-copy/" rel="alternate" type="text/html" title="[백준] 2960번 에라토스테네스의 체 / C++"/><published>2024-05-28T00:00:00+00:00</published><updated>2024-05-28T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj17219%20copy</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj17219-copy/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2960">백준 2960번 에라토스테네스의 체</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-29T04:55:31+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 9613번 GCD 합 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9613/" rel="alternate" type="text/html" title="[백준] 9613번 GCD 합 / C++"/><published>2024-05-29T00:00:00+00:00</published><updated>2024-05-29T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9613</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9613/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9613">백준 9613번 GCD 합</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">GCD</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">?</span> <span class="n">y</span> <span class="o">:</span> <span class="n">x</span><span class="p">;</span>
+
+	<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">r</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+		<span class="n">b</span> <span class="o">=</span> <span class="n">r</span><span class="p">;</span>
+		<span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+		<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">;</span>
+		<span class="n">arr</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+			<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+
+			<span class="n">arr</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+		<span class="p">}</span>
+
+		<span class="kt">long</span> <span class="kt">long</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">total</span> <span class="o">+=</span> <span class="n">GCD</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">total</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>테스트 케이스 t를 입력 받고, 각 케이스 별로 n개의 숫자를 받는다. 테스트 케이스별로 입력 받은 모든 숫자들을 쌍으로 GDC를 구하고, 구한 모든 GDC의 합계를 출력하는 문제. 테스트 케이스별로 vector를 초기화하고 n개의 숫자를 vector에 push한 뒤, 모든 숫자를 버블로 GCD를 구했다. 구한 값을 total 변수에 더하고 출력하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 2960번 에라토스테네스의 체 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj2960/" rel="alternate" type="text/html" title="[백준] 2960번 에라토스테네스의 체 / C++"/><published>2024-05-28T00:00:00+00:00</published><updated>2024-05-28T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj2960</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj2960/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/2960">백준 2960번 에라토스테네스의 체</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -371,62 +432,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>2xn 직사각형을 1x2, 2x1, 2x2 타일로 채우는 방법의 수를 구하는 프로그램을 작성하는 문제. ‘2xn 타일링 1’ 문제에서 2x2 타일이 추가된 형태다. 세 가지 타일을 사용하는 방법으로 나누어 생각할 수 있는데, 2x1타일의 경우 ‘dp[n-1]’과 같았고, 1x2타일은 [n-2]와 같았다. 2x2타일은 1x2타일과 같았기 때문에 점화식을 다음과 같이 유도할 수 있었다. <code class="language-plaintext highlighter-rouge">dp[n] = dp[n-1] + dp[n-2] * 2</code> 여기서 10,007 나머지 연산을 해주고 dp에 추가하여 해결할 수 있었다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 1002번 터렛 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1002/" rel="alternate" type="text/html" title="[백준] 1002번 터렛 / C++"/><published>2024-05-19T00:00:00+00:00</published><updated>2024-05-19T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1002</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1002/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1002">백준 1002번 터렛</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-
-	<span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">r2</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span> <span class="o">&gt;&gt;</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="n">x2</span> <span class="o">&gt;&gt;</span> <span class="n">y2</span> <span class="o">&gt;&gt;</span> <span class="n">r2</span><span class="p">;</span>
-
-		<span class="kt">double</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">pow</span><span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
-
-		<span class="k">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">==</span> <span class="n">r2</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-			<span class="p">}</span>
-			<span class="k">else</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="k">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">&gt;</span> <span class="n">r</span> <span class="o">+</span> <span class="n">r2</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-			<span class="p">}</span>
-			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">&lt;</span> <span class="n">abs</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">r2</span><span class="p">))</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span> 
-			<span class="p">}</span>
-			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="n">r</span> <span class="o">+</span> <span class="n">r2</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-			<span class="p">}</span>
-			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">dist</span> <span class="o">==</span> <span class="n">abs</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">r2</span><span class="p">))</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-			<span class="p">}</span>
-			<span class="k">else</span>
-			<span class="p">{</span>
-				<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>두 개 터렛의 좌표와 목표와의 거리가 주어지고, 목표가 존재할 수 있는 좌표의 수를 구하는 문제다. 그림으로 각 터렛의 좌표를 표시하고, 목표와의 거리를 이용해 원을 그려보면 두 개의 원이 내접하거나 떨어져 있는 경우를 확인할 수 있었다. 주의해야 할 점은 터렛 두 개가 겹칠 수도 있기 때문에, 각 거리가 0인 경우와 0이 아닌 경우를 나눠 생각해야 했다. 먼저 두 개 터렛의 거리를 구한다. 2차원 좌표 두 점 거리를 구하는 방법은 유클리드 공식을 사용하여 구했다. <code class="language-plaintext highlighter-rouge">double dist = sqrt(pow(x2 - x, 2) + pow(y2 - y, 2))</code> (<code class="language-plaintext highlighter-rouge">sqrt</code>는 루트, <code class="language-plaintext highlighter-rouge">pow</code>는 제곱을 구하는 함수다.) 중심이 같은 경우, 반지름이 같다면 ‘-1’, 반지름이 다르다면 두 개 원이 겹치지 않기 때문에 ‘0’을 출력. 중심이 다를 때는 떨어져 있을 때, 한 원이 다른 원의 내부에 있을 때, 내접할 때, 만날 때 등을 고려하여 if문을 작성하여 해결했다. 그리고 좌표가 음수일 수 있기 때문에 절대값을 반환하는 abs 함수를 사용하여 조건을 꾸렸다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>2xn 직사각형을 1x2, 2x1, 2x2 타일로 채우는 방법의 수를 구하는 프로그램을 작성하는 문제. ‘2xn 타일링 1’ 문제에서 2x2 타일이 추가된 형태다. 세 가지 타일을 사용하는 방법으로 나누어 생각할 수 있는데, 2x1타일의 경우 ‘dp[n-1]’과 같았고, 1x2타일은 [n-2]와 같았다. 2x2타일은 1x2타일과 같았기 때문에 점화식을 다음과 같이 유도할 수 있었다. <code class="language-plaintext highlighter-rouge">dp[n] = dp[n-1] + dp[n-2] * 2</code> 여기서 10,007 나머지 연산을 해주고 dp에 추가하여 해결할 수 있었다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
