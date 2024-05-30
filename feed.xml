@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-29T04:55:31+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 9613번 GCD 합 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9613/" rel="alternate" type="text/html" title="[백준] 9613번 GCD 합 / C++"/><published>2024-05-29T00:00:00+00:00</published><updated>2024-05-29T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9613</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9613/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9613">백준 9613번 GCD 합</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-30T07:56:46+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1244번 스위치 켜고 끄기 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1244/" rel="alternate" type="text/html" title="[백준] 1244번 스위치 켜고 끄기 / C++"/><published>2024-05-30T00:00:00+00:00</published><updated>2024-05-30T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1244</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1244/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1244">백준 1244번 스위치 켜고 끄기</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="n">arr</span><span class="p">[</span><span class="mi">101</span><span class="p">];</span>
+
+<span class="kt">void</span> <span class="nf">switching</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="n">arr</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
+	<span class="p">{</span>
+		<span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="o">!</span><span class="n">arr</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+		<span class="n">arr</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="o">!</span><span class="n">arr</span><span class="p">[</span><span class="n">y</span><span class="p">];</span>
+		
+		<span class="n">switching</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+
+		<span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kt">int</span> <span class="n">student</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">student</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">student</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">y</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">!</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">arr</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="o">!</span><span class="n">arr</span><span class="p">[</span><span class="n">y</span><span class="p">];</span>
+			<span class="n">switching</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">20</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 스위치를 순서대로 받는다. 그리고 student만큼 숫자를 두 개씩 받는데, 첫 번째 숫자가 1이면 남학생, 2면 여학생이다. 두 번째 숫자는 스위치 번호이다. 남학생이 받은 스위치 번호를 포함한 배수의 스위치를 반전시킨다. 여학생은 받은 스위치 번호를 포함해서 +1, -1 스위치가 같은 값일 경우, 다른 값 혹은 범위를 벗어날 때까지 반전시킨다. 모든 작업을 끝내고 결과를 출력하는데, 20개 한 줄씩 출력하는 문제다. 일단 스위치를 bool타입 배열로 받았다. 학생 수를 받고, 각 학생이 남학생인지 여학생인지에 따라 스위칭 수식을 적용하였다. 남학생같은 경우에는 배수로 역전시키면 됐으니 어렵지 않았다. 여학생의 경우는 받은 숫자부터 위, 아래로 최대 범위까지 반복되기 때문에 재귀함수를 사용하여 스위치를 반전시켰다. 출력할 때는 20개마다 줄바꿈을 할 수 있도록 코드를 작성하여 해결하였다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 9613번 GCD 합 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj9613/" rel="alternate" type="text/html" title="[백준] 9613번 GCD 합 / C++"/><published>2024-05-29T00:00:00+00:00</published><updated>2024-05-29T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj9613</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj9613/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/9613">백준 9613번 GCD 합</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -406,30 +472,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 수를 받는다. 받은 수에서 연속된 수의 합이 m과 같다면 카운팅을 하고, m을 넘어간다면 패스하고 다음 숫자로 넘어간다. 마지막 숫자까지 배열의 합을 진행하고, 카운팅을 출력하는 프로그램을 만드는 문제. 간단한 문제다. 수열의 합이 m을 넘어가는 지와 배열 끝이 넘어가는 지 신경쓰며 코드를 작성하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 11727번 2xn 타일링 2 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11727/" rel="alternate" type="text/html" title="[백준] 11727번 2xn 타일링 2 / C++"/><published>2024-05-20T00:00:00+00:00</published><updated>2024-05-20T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11727</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11727/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11727">백준 11727번 2xn 타일링 2</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">long</span> <span class="kt">long</span> <span class="n">dp</span><span class="p">[</span><span class="mi">1001</span><span class="p">];</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-
-	<span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-	<span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">])</span> <span class="o">%</span> <span class="mi">10007</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>2xn 직사각형을 1x2, 2x1, 2x2 타일로 채우는 방법의 수를 구하는 프로그램을 작성하는 문제. ‘2xn 타일링 1’ 문제에서 2x2 타일이 추가된 형태다. 세 가지 타일을 사용하는 방법으로 나누어 생각할 수 있는데, 2x1타일의 경우 ‘dp[n-1]’과 같았고, 1x2타일은 [n-2]와 같았다. 2x2타일은 1x2타일과 같았기 때문에 점화식을 다음과 같이 유도할 수 있었다. <code class="language-plaintext highlighter-rouge">dp[n] = dp[n-1] + dp[n-2] * 2</code> 여기서 10,007 나머지 연산을 해주고 dp에 추가하여 해결할 수 있었다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>n개의 수를 받는다. 받은 수에서 연속된 수의 합이 m과 같다면 카운팅을 하고, m을 넘어간다면 패스하고 다음 숫자로 넘어간다. 마지막 숫자까지 배열의 합을 진행하고, 카운팅을 출력하는 프로그램을 만드는 문제. 간단한 문제다. 수열의 합이 m을 넘어가는 지와 배열 끝이 넘어가는 지 신경쓰며 코드를 작성하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
