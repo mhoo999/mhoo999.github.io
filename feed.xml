@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-05-31T05:45:19+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 11659번 구간 합 구하기 4 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11659/" rel="alternate" type="text/html" title="[백준] 11659번 구간 합 구하기 4 / C++"/><published>2024-05-31T00:00:00+00:00</published><updated>2024-05-31T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11659</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11659/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11659">백준 11659번 구간 합 구하기 4</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-06-01T10:25:09+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1748번 수 이어 쓰기 1 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1748/" rel="alternate" type="text/html" title="[백준] 1748번 수 이어 쓰기 1 / C++"/><published>2024-06-01T00:00:00+00:00</published><updated>2024-06-01T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1748</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1748/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1748">백준 1748번 수 이어 쓰기 1</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+	<span class="kt">long</span> <span class="kt">long</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">digit</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">startNum</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">endNum</span> <span class="o">=</span> <span class="n">startNum</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="n">endNum</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">startNum</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">digit</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">endNum</span> <span class="o">-</span> <span class="n">startNum</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">digit</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="n">startNum</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
+		<span class="n">digit</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sum</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>1부터 n까지의 수를 이어쓰면 새로운 수를 얻을 수 있는데, n의 자리수를 출력하는 문제.(ex. n == 11, 1234567891011, 13출력) 1-9까지는 1자리, 10-99까지는 2자리, 100-999까지는 3자리임을 알 수 있다. 10을 넘길 때, 100을 넘길 때 그 전까지의 자리수를 한 번에 더해주면 빠르게 숫자를 출력 가능하다. 이를 활용해 수식을 작성하여 해결했다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 11659번 구간 합 구하기 4 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11659/" rel="alternate" type="text/html" title="[백준] 11659번 구간 합 구하기 4 / C++"/><published>2024-05-31T00:00:00+00:00</published><updated>2024-05-31T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11659</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11659/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11659">백준 11659번 구간 합 구하기 4</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -410,58 +448,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>입력받는 n에 포함되는 수를 섞어 30의 배수가 되는 가장 큰 수를 만들어 출력하는 문제. 만약 30의 배수가 되지 않으면 “-1”을 출력한다. 일단 30의 배수가 되는 조건을 고려한다. 숫자 전체의 합이 3의 배수여야 하며, 숫자에 0이 하나 이상 포함되어있어야 한다. 먼저 0이 있는지 체크하고, 없으면 “-1”을 출력하여 종료. 있다면 모든 숫자의 합을 구하고 3으로 나눈 값을 확인한다. 0이 아니라면 “-1”을 출력하고 종료. 0이라면 n을 내림차순으로 정렬하고(가장 큰 수여야 하니까) 출력하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 1269번 대칭 차집합 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1269/" rel="alternate" type="text/html" title="[백준] 1269번 대칭 차집합 / C++"/><published>2024-05-22T00:00:00+00:00</published><updated>2024-05-22T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1269</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1269/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1269">백준 1269번 대칭 차집합</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;unordered_set&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">setA</span><span class="p">;</span>
-<span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">setB</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
-
-		<span class="n">setA</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
-
-		<span class="n">setB</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">iter</span> <span class="o">:</span> <span class="n">setA</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">setB</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">iter</span><span class="p">)</span> <span class="o">==</span> <span class="n">setB</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
-		<span class="p">{</span>
-			<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">iter</span> <span class="o">:</span> <span class="n">setB</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">setA</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">iter</span><span class="p">)</span> <span class="o">==</span> <span class="n">setA</span><span class="p">.</span><span class="n">end</span><span class="p">())</span>
-		<span class="p">{</span>
-			<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span><span class="p">;</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>두 개 집합의 원소를 받아 각 집합이 공역일 때 차집합 개수를 더하여 출력하는 문제. 배열을 사용하는 경우 시간초과가 발생하여 시간 복잡도가 O(n)인 해쉬맵을 사용하여 해결. <code class="language-plaintext highlighter-rouge">if (setB.find(iter) == setB.end())</code> 인 경우 setA의 모든 원소를 돌면서 setB 내 원소가 없을 경우(<code class="language-plaintext highlighter-rouge">setB.find(iter)</code>가 <code class="language-plaintext highlighter-rouge">setB.end()</code>와 같은 경우) 카운팅하는 코드를 작성하였다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>입력받는 n에 포함되는 수를 섞어 30의 배수가 되는 가장 큰 수를 만들어 출력하는 문제. 만약 30의 배수가 되지 않으면 “-1”을 출력한다. 일단 30의 배수가 되는 조건을 고려한다. 숫자 전체의 합이 3의 배수여야 하며, 숫자에 0이 하나 이상 포함되어있어야 한다. 먼저 0이 있는지 체크하고, 없으면 “-1”을 출력하여 종료. 있다면 모든 숫자의 합을 구하고 3으로 나눈 값을 확인한다. 0이 아니라면 “-1”을 출력하고 종료. 0이라면 n을 내림차순으로 정렬하고(가장 큰 수여야 하니까) 출력하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
