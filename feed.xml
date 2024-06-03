@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-06-02T04:27:58+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 1302번 베스트셀러 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1302/" rel="alternate" type="text/html" title="[백준] 1302번 베스트셀러 / C++"/><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1302</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1302/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1302">백준 1302번 베스트셀러</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://mhoo999.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://mhoo999.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-06-03T06:31:31+00:00</updated><id>https://mhoo999.github.io/feed.xml</id><title type="html">TechHoonology</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">[백준] 3036번 링 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj3036/" rel="alternate" type="text/html" title="[백준] 3036번 링 / C++"/><published>2024-06-03T00:00:00+00:00</published><updated>2024-06-03T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj3036</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj3036/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/3036">백준 3036번 링</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">LCM</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">?</span> <span class="n">y</span> <span class="o">:</span> <span class="n">x</span><span class="p">;</span>
+
+	<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+
+	<span class="k">while</span> <span class="p">(</span><span class="n">r</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+		<span class="n">b</span> <span class="o">=</span> <span class="n">r</span><span class="p">;</span>
+		<span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>
+	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
+
+		<span class="kt">int</span> <span class="n">lcm</span> <span class="o">=</span> <span class="n">LCM</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">/</span> <span class="n">lcm</span> <span class="o">&lt;&lt;</span> <span class="s">"/"</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">/</span> <span class="n">lcm</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>3보다 크거나 같고, 100보다 작거나 같은 n개의 링을 입력 받는다. 첫 번째 받은 링을 한 바퀴 돌리면 나머지 링이 몇 바퀴 도는지 기약 분수 형태로 A/B 형태를 출력하는 문제. 문제를 읽었을 땐, 바로 와닿지 않았지만, 입력 출력 예시를 보고 금방 이해했다. 첫 번째 받은 숫자와 두 번째 받은 숫자부터 각각 짝으로 최고공배수를 구해서 나눈 값을 출력하면 되겠다고 생각했다. n과 x를 먼저 받고, n - 1 만큼 숫자를 y로 받으면서, x와 y의 최소 공배수를 구하고 각각 최소 공배수로 나눈 값을 출력하여 해결.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 1302번 베스트셀러 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj1302/" rel="alternate" type="text/html" title="[백준] 1302번 베스트셀러 / C++"/><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj1302</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj1302/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/1302">백준 1302번 베스트셀러</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
@@ -431,42 +472,4 @@
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>dfs를 활용하여 해결할 수 있는 문제. 파라미터에 따라 중복을 허용할지, 말지 구분된다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry><entry><title type="html">[백준] 11656번 접미사 배열 / C++</title><link href="https://mhoo999.github.io/blog/2024/boj11656/" rel="alternate" type="text/html" title="[백준] 11656번 접미사 배열 / C++"/><published>2024-05-24T00:00:00+00:00</published><updated>2024-05-24T00:00:00+00:00</updated><id>https://mhoo999.github.io/blog/2024/boj11656</id><content type="html" xml:base="https://mhoo999.github.io/blog/2024/boj11656/"><![CDATA[<h3 id="문제">#문제</h3> <p><a href="https://www.acmicpc.net/problem/11656">백준 11656번 접미사 배열</a></p> <h3 id="풀이">#풀이</h3> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-	<span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
-
-	<span class="n">string</span> <span class="n">s</span><span class="p">;</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">string</span> <span class="n">suffix</span><span class="p">;</span>
-
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="n">suffix</span> <span class="o">+=</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-		<span class="p">}</span>
-
-		<span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">suffix</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">iter</span> <span class="o">:</span> <span class="n">vec</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">iter</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div> <h3 id="정리">#정리</h3> <p>접미사 배열을 입력받고 사전순으로 출력하는 프로그램을 만드는 문제. 입력받은 접미사를 분해하여 vector 컨테이너에 담고 정렬하여 출력.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
+</code></pre></div></div> <h3 id="정리">#정리</h3> <p>dfs를 활용하여 해결할 수 있는 문제. 파라미터에 따라 중복을 허용할지, 말지 구분된다.</p>]]></content><author><name></name></author><category term="algorithm"/><category term="백준"/><category term="boj"/><category term="c++"/><category term="codingtest"/><category term="algorithm"/><summary type="html"><![CDATA[백준 C++ 풀이]]></summary></entry></feed>
