@@ -1,7 +1,7 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
+title: Portpolio
+permalink: /Portpolio/
 description: 썸네일 카드를 통해 간략하게 어떤 프로젝트를 진행했는지 확인할 수 있습니다. 클릭하면 상세로 이동합니다.
 nav: true
 nav_order: 3
